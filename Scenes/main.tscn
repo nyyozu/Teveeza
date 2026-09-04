@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://pnkk0mh5xgqm"]
 
 [ext_resource type="Script" uid="uid://cbwxlrog7jcpa" path="res://Scripts/main.gd" id="1_6bp64"]
-[ext_resource type="PackedScene" uid="uid://d4decv7b55peh" path="res://Scenes/background.tscn" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bjnf26o7nqlah" path="res://Assets/sheet.png" id="2_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://blmkkgbtqxxhd" path="res://Assets/orig.png" id="2_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://t2j5mv00ojwn" path="res://Assets/nature_1/orig.png" id="3_hptm8"]
@@ -510,32 +509,23 @@ script = ExtResource("1_6bp64")
 visibility_layer = 7
 
 [node name="ScrollBG" type="Parallax2D" parent="World" unique_id=508002576]
+scale = Vector2(1.3, 1.3)
+scroll_offset = Vector2(-164, 109)
 repeat_size = Vector2(1153, 0)
-repeat_times = 2
+repeat_times = 4
 
 [node name="BGP1" type="Sprite2D" parent="World/ScrollBG" unique_id=150978704]
+position = Vector2(0, -160)
 scale = Vector2(2.0017362, 2.006173)
 texture = ExtResource("2_ynf5e")
 centered = false
 
 [node name="BGP2" type="Sprite2D" parent="World/ScrollBG" unique_id=155905100]
 visibility_layer = 2
+position = Vector2(0, -160)
 scale = Vector2(2.0017362, 2.006173)
 texture = ExtResource("3_hptm8")
 centered = false
-
-[node name="Background" parent="World" unique_id=1772900835 instance=ExtResource("1_jjgbg")]
-visible = false
-
-[node name="TextureRect" parent="World/Background" index="0" unique_id=1600594037]
-offset_right = 1153.0
-offset_bottom = 650.0
-scale = Vector2(1, 1)
-
-[node name="TextureRect2" parent="World/Background" index="1" unique_id=273425201]
-offset_right = 1153.0
-offset_bottom = 650.0
-scale = Vector2(1, 1)
 
 [node name="P1" type="CharacterBody2D" parent="World" unique_id=292697037]
 visibility_layer = 7
@@ -560,7 +550,7 @@ remote_path = NodePath("../../../Splitscreen/GridContainer/SVPC-P1/SVP-P1/CAMP1"
 
 [node name="P2" type="CharacterBody2D" parent="World" unique_id=180668677]
 visibility_layer = 7
-position = Vector2(751, 272)
+position = Vector2(275, 275)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("5_21xkr")
@@ -588,7 +578,7 @@ tile_set = SubResource("TileSet_odd77")
 
 [node name="TerrainP2" type="TileMapLayer" parent="World" unique_id=1043560748]
 visibility_layer = 4
-tile_map_data = PackedByteArray("AAAsABMAAAAKAAEAAAAtABMAAAALAAEAAAAuABMAAAALAAEAAAAvABMAAAALAAEAAAAwABMAAAALAAEAAAAxABMAAAAMAAEAAAAzABAAAAAKAAEAAAA0ABAAAAALAAEAAAA1ABAAAAALAAEAAAA2ABAAAAALAAEAAAA3ABAAAAALAAEAAAA4ABAAAAAMAAEAAAA+AB4AAAAKAAEAAAA/AB4AAAALAAEAAABAAB4AAAALAAEAAABBAB4AAAALAAEAAABCAB4AAAALAAEAAABDAB4AAAALAAEAAABEAB4AAAAMAAEAAAA=")
+tile_map_data = PackedByteArray("AAAsABMAAAAKAAEAAAAtABMAAAALAAEAAAAuABMAAAALAAEAAAAvABMAAAALAAEAAAAwABMAAAALAAEAAAAxABMAAAAMAAEAAAAzABAAAAAKAAEAAAA0ABAAAAALAAEAAAA1ABAAAAALAAEAAAA2ABAAAAALAAEAAAA3ABAAAAALAAEAAAA4ABAAAAAMAAEAAAA+AB4AAAAKAAEAAAA/AB4AAAALAAEAAABAAB4AAAALAAEAAABBAB4AAAALAAEAAABCAB4AAAALAAEAAABDAB4AAAALAAEAAABEAB4AAAAMAAEAAAAPABQAAAAKAAEAAAAQABQAAAALAAEAAAARABQAAAALAAEAAAASABQAAAALAAEAAAATABQAAAALAAEAAAAUABQAAAALAAEAAAAVABQAAAALAAEAAAAWABQAAAAMAAEAAAAbABEAAAAKAAEAAAAcABEAAAALAAEAAAAdABEAAAALAAEAAAAeABEAAAALAAEAAAAfABEAAAALAAEAAAAgABEAAAALAAEAAAAhABEAAAALAAEAAAAiABEAAAAMAAEAAAAnAA4AAAAMAAEAAAAmAA4AAAAKAAEAAAA=")
 tile_set = SubResource("TileSet_smuj2")
 
 [node name="TerrainP1XP2" type="TileMapLayer" parent="World" unique_id=640785324]
@@ -650,7 +640,7 @@ render_target_update_mode = 4
 [node name="CAMP2" type="Camera2D" parent="Splitscreen/GridContainer/SVPC-P2/SVP-P2" unique_id=1414851887]
 light_mask = 2
 visibility_layer = 5
-position = Vector2(751.5039, 272.50397)
+position = Vector2(275.5039, 275.50397)
 limit_enabled = false
 
 [node name="ColorRect" type="ColorRect" parent="Splitscreen" unique_id=1600071213]
@@ -658,5 +648,3 @@ offset_left = 578.0
 offset_right = 582.0
 offset_bottom = 650.0
 color = Color(0.0072880546, 0.61148244, 0.64021295, 1)
-
-[editable path="World/Background"]
