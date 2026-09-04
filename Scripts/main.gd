@@ -8,6 +8,7 @@ extends Node2D
 func _ready() -> void:
 	_setup_shared_world()
 	camera_1.make_current()
+	camera_2.make_current()
 
 func _process(_delta):
 	pass
