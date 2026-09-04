@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d4decv7b55peh"]
+
+[ext_resource type="Texture2D" uid="uid://du2y0entrcmms" path="res://Assets/nature_1/origbig.png" id="1_sn1xx"]
+[ext_resource type="Texture2D" uid="uid://blmkkgbtqxxhd" path="res://Assets/orig.png" id="2_pojwb"]
+
+[node name="Background" type="Node2D" unique_id=1772900835]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1600594037]
+offset_right = 2306.0
+offset_bottom = 1300.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sn1xx")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=273425201]
+visibility_layer = 2
+offset_right = 2306.0
+offset_bottom = 1300.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pojwb")
+expand_mode = 1
