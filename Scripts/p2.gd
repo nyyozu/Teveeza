@@ -34,3 +34,7 @@ func update_animations(direction: float) -> void:
 		animated_sprite.play("walk")
 	else:
 		animated_sprite.play("idle")
+
+func morrer() -> void:
+	set_physics_process(false)
+	animated_sprite.play("death")
