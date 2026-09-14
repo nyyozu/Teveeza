@@ -600,6 +600,10 @@ sources/0 = SubResource("TileSetAtlasSource_344ge")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_milbd"]
 size = Vector2(5076.5, 181)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ynf5e"]
+font_size = 50
+font_color = Color(1, 0, 0.015686275, 1)
+
 [node name="Main" type="Node2D" unique_id=2068313577]
 script = ExtResource("1_6bp64")
 
@@ -691,6 +695,7 @@ tile_set = SubResource("TileSet_r6a7o")
 
 [node name="DeathArea" type="Area2D" parent="World" unique_id=257325798]
 position = Vector2(0, 700)
+collision_mask = 7
 script = ExtResource("9_ynf5e")
 
 [node name="DeathCollision" type="CollisionShape2D" parent="World/DeathArea" unique_id=2028763453]
@@ -712,6 +717,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
+label_settings = SubResource("LabelSettings_ynf5e")
 
 [node name="Splitscreen" type="CanvasLayer" parent="." unique_id=227130251]
 
